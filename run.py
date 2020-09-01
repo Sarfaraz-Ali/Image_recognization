@@ -26,8 +26,6 @@ def run() :
 	d = model(X_train , Y_train , X_test , Y_test)
 
 
-
-
 	my_image = "my_image.jpg"   # change this to the name of your image file 
 
 	#  preprocess the image 
