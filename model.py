@@ -1,13 +1,13 @@
 
 import numpy as np 
-from initialize import initialize
 from predict import predict 
 from optimize import optimize 
 
 def model(X_train, Y_train, X_test, Y_test, num_iterations = 2000, learning_rate = 0.5, print_cost = False):
     
     
-    w, b = initialize(X_train.shape[0])
+    w = np.zeros(X_train.shape[0]).reshape(X_train.shape[0],1)
+    b = 0
 
     parameters, grads, costs = optimize(w, b, X_train, Y_train, num_iterations, learning_rate)
     

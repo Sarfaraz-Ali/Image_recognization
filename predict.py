@@ -11,10 +11,6 @@ def predict(w, b, X):
     
     A = sigmoid(np.dot(w.T,X)+b)
     
-    for i in range(A.shape[1]):
+    Y_prediction = (A>=0.5)*1
         
-        Y_prediction = (A>=0.5)*1
-     
-    assert(Y_prediction.shape == (1, m))
-    
     return Y_prediction

@@ -13,12 +13,8 @@ def propagate(w, b, X, Y):
     dw = np.dot(X,(A-Y).T)/m
     db = np.sum((A-Y)/m)
     
-    assert(dw.shape == w.shape)
-    assert(db.dtype == float)
     cost = np.squeeze(cost)
-    assert(cost.shape == ())
-    
-    
+        
     grads = {"dw": dw,
              "db": db}
     
